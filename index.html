@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Tech and Flex LLC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./css/css2" rel="stylesheet">
+
+    <script>
+        var savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            document.documentElement.dataset.theme = savedTheme;
+        } else {
+            var prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
+            var theme = prefersDarkTheme.matches ? 'dark' : 'light';
+            document.documentElement.dataset.theme = theme;
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="manifest" href="./site.webmanifest">
+
+    <link rel="icon" href="./favicon.ico">
+
+    <meta property="og:title" content="Tech and Flex">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tech and Flex">
+    <meta property="og:description" content="It’s all living">
+    <meta property="og:url" content="https://tng.llc">
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1065.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+
+    <div class="wrapper">
+
+        <header id="site-header">
+           
+            <button id="theme-toggle" class="button">
+                <img class="show-dark" src="./asset/sun.svg" alt="Change to light theme">
+                <img class="show-light" src="./asset/moon.svg" alt="Change to dark theme">
+
+                <span class="sr-only">Toggle theme</span>
+            </button>
+        </header>
+
+        <div class="hero">
+            <p class="hero__tagline">Tech and Flex<br></p>
+            <p class="hero__subtagline">There is no real difference between work and play.<br>It’s all living.</p>
+        </div>
+
+        <section>
+            <h2>Products</h2>
+            <div class="cards-two-col">
+
+                <article class="card">
+                    <header>
+                        <img src="./asset/buycoins.png" alt="Jiggylife">
+                        <h3>Jiggylife</h3>
+                    </header>
+                    <p>
+                        Jiggylife is the modern world for influencers.<br>
+                        A group of 20 influencers stand a chance to win huge cash prices every week. Violence is our watchword, Peace was never an option... Never lmao 😁😆
+                    </p>
+                    <footer>
+                        <a class="button" href="https://jiggylife.com" target="_blank">
+                            Visit &nbsp;
+                            <svg class="external-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 17L17.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7.5 7H17.5V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </footer>
+                </article>
+
+            
+
+
+
+                <article class="card">
+                    <header>
+                        <img src="./asset/sendcash.png" alt="Xendlife">
+                        <h3>Xendlife</h3>
+                    </header>
+                    <p>
+                        Xendlife is simplifying the use of crypto.<br>
+                        It allows you send, receive or keep any kind of cryptocurrency with instant conversion to your local currency (fiat). Which means you no longer need to worry about crypto volatility.
+                    </p>
+                    <footer>
+                        <a class="button" href="https://xendlife.com" target="_blank">
+                            Visit &nbsp;
+                            <svg class="external-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 17L17.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7.5 7H17.5V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </footer>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Mission Statement</h2>
+
+            <p>
+                Our mission is to provide Simplicity. We want to build products that reduces all technicalities to the bearest minimum thereby making our products extremely easy to use. Simplicity is our core mission as it allows us think more about the customers and their experience using our products. Simplicity allows us provide clean and minimal interface with the right functionalities. 
+            </p>
+        </section>
+
+        <section>
+            <h2>Leadership</h2>
+
+            <div class="cards-three-col">
+                <div class="card">
+                    <figure>
+                        <img src="./asset/silver.jpeg" alt="Silver">
+                    </figure>
+                    <p>Balogun Silver</p>
+                </div>
+
+                <!----
+                <div class="card">
+                    <figure>
+                        <img src="./asset/ire.png" alt="Smart">
+                    </figure>
+                    <p>Ogunbameru Smart</p>
+                </div>
+
+                <div class="card">
+                    <figure>
+                        <img src="./asset/tomiwa.png" alt="Max">
+                    </figure>
+                    <p>Ayo Adekola</p>
+                </div>
+            -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/background.js" async="" defer=""></script>
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            var currentTheme = document.documentElement.dataset.theme || 'light';
+            var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.dataset.theme = newTheme;
+            localStorage.setItem('theme', newTheme);
+            animloop();
+        });
+    </script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
